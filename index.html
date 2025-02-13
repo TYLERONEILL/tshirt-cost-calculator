@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T-Shirt Print Cost Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator">
+        <h1>T-Shirt Print Cost Calculator</h1>
+        <form id="calculator-form">
+            <label for="numShirts">Number of Shirts</label>
+            <input type="number" id="numShirts" name="numShirts" required>
+
+            <label for="shirtType">Shirt Type</label>
+            <select id="shirtType" name="shirtType">
+                <option value="cotton">Cotton</option>
+                <option value="polyester">Polyester</option>
+                <option value="blend">Blend</option>
+            </select>
+
+            <label for="printType">Print Type</label>
+            <select id="printType" name="printType">
+                <option value="screen">Screen Print</option>
+                <option value="vinyl">Vinyl</option>
+                <option value="embroidery">Embroidery</option>
+                <option value="dtg">DTG (Direct to Garment)</option>
+            </select>
+
+            <label for="colors">Number of Colors in Design</label>
+            <input type="number" id="colors" name="colors" required>
+
+            <label for="printSides">Printing Sides</label>
+            <select id="printSides" name="printSides">
+                <option value="front">Front</option>
+                <option value="back">Back</option>
+                <option value="both">Both</option>
+            </select>
+
+            <label for="rushOrder">Rush Order?</label>
+            <input type="checkbox" id="rushOrder" name="rushOrder">
+
+            <button type="button" onclick="calculateCost()">Calculate Total Cost</button>
+        </form>
+
+        <div id="result">
+            <h3>Total Cost: $<span id="cost">0.00</span></h3>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
